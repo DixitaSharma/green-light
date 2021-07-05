@@ -1,0 +1,274 @@
+/* GLOBAL STYLES */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #acb6e5, #86fde8);
+}
+@media (max-width: 900px)
+{
+  * {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  background: #34495e;
+  display: flex;
+  justify-content: space-between;
+}
+img{
+    border-radius: 50%;
+    zoom:40% !important;
+    padding:30px;
+    margin-left:50px;
+}
+nav ul {
+  float: right;
+  margin-right: 190px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+nav a {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 4px;
+}
+a.active,
+a:hover {
+  border: 1px solid white;
+  transition: 0.5s;
+}
+
+
+@media (max-width: 900px) {
+  nav {
+    height: 80px;
+    width: 100%;
+    background: #34495e;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  nav ul {
+    
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #acb6e5, #86fde8);
+    top: 80px;
+    position: fixed;
+    
+  }
+  nav li {
+    display: inline-block;
+    line-height: 30px;
+  }
+  nav a {
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 4px;
+  }
+  a.active,
+  a:hover {
+    border: 1px solid black;
+    color: #3498db;
+  }
+}
+.container {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 20px !important;
+  backdrop-filter:blur(10px);
+  box-shadow: 5px 5px 30px #00000033;
+  border-radius: 5px;
+  height: 50vh;
+}
+h2 {
+  line-height: 40px;
+}
+form {
+ margin-top: 60px;
+}
+tr{
+ line-height: 44px!important;
+}
+td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:8.3px
+}
+input {
+   width: 270%;
+  /* border: 2px solid black; */
+  /* left: 40%; */
+  /* margin: 8px; */
+  /* color: black; */
+}
+button {
+  height: 20px;
+  padding: 1px;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: 0.5s linear;
+  margin-left: 59px;
+}
+button:hover {
+  box-shadow: 2px 2px 20px #be4a07;
+}
+@media (max-width: 900px) {
+  .container {
+    position: fixed;
+    display: block;
+    margin-right: 20px;
+    height: 50vh;
+    width: 53vw;
+    border: 5px solid black;
+  }
+  button {
+    height: 40px;
+    padding: 5px;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: 0.5s linear;
+  }
+  button:hover {
+    box-shadow: 2px 2px 20px #ff5e00;
+  }
+}
+#mymodel
+{
+  display: none;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  transform: translateX(-50%, -50%);
+  width: 70%;
+  height: 30%;
+ background-color: rgb(120, 144, 252);
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index:3;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:black;
+  height: 30vh;
+  width: 100vw;
+  font-family:"Open Sans";
+  padding-top: 3px;
+  color:white;
+}
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center; 
+
+}
+.footer-content p{
+  max-width: 500px;
+  background: black;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+.footer-content h3{
+  font-size: 40px;
+  font-weight: 400;
+  text-transform:capitalize;
+  line-height:3 rem;
+
+}
+.footer-bottom
+{
+background-color: black;
+width: 100vw;
+padding:10px 0;
+text-align: center;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
+.contact{
+  background:turquoise;
+  bottom: 50;
+  left: 50;
+  right:50;
+  margin-top: 100px;
+  height: 30vh;
+  width: 30vh;
+  border: 2px solid black;
+
+
+}
+.myBtn1 {
+
+  margin-top: 40px;
+  line-height: 20px;
+  background: black;
+  color: white;
+  height: 30px;
+  width: 50px;
+}
+search{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  display: flex;
+  margin-top: 0;
+}
+input{
+  padding:0.5 rem;
+  outline: none;
+  font-size: 1rem;
+}
+/* .searchButton{
+  padding:0.5rem,3rem;
+  margin-left:20px;
+  background-color: #064c7a;
+  color: white;
+  font-size: 3.2 rem;
+  cursor: pointer;
+  text-align: center;
+} */

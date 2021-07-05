@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  
+    <title>GreenLightAssignment</title>
+    <style>
+        span{
+
+            color:red;
+            font-size:13px;
+            
+            
+        }
+
+    </style>
+   
+</head>
+
+
+<body>
+    <nav>
+        <img class="logo" src="./logo.jpg" alt="">
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Phot</a></li>
+           
+        </ul>
+        <!-- <i class="fa fa-align-justify" style="font-size:xx-large"></i> -->
+    </nav>
+    <div class="container center" style="flex-direction: column;">
+        <h2>Database Login</h2>
+        <form action="#" method="post"  autocomplete="off" name='green-light' 
+        onsubmit="return validation()" class="myform">
+            <table>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="text" id="email" name="email">
+                        <br><span id="emaill"></span>
+                    </td>
+                 
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td><input type="text" name="username" id="username">
+                     <br><span id="usernamee"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td><input type="password" name="password" id="password">
+                      <br><span id="passwordd"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th style=>ResetPassword</th>
+                    <td><input type="text" name="repassword" id="repassword">
+                       <br> <span id="repasswordd"></span>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><button type="submit" class="myBtn">Submit</button>
+                        <div id="mymodel">
+                     
+                        <p> thank-you 
+                             message & page reload IN 8...7...6...5...4... Sec. & after 8 seconds reload the  page.
+
+                        </p>
+                        
+                      
+                    </div>
+                    </td>
+                </tr>
+                
+            </table>
+        </form>
+      
+    </div>
+    <div class="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+           +91-9991919902,
+           +91-9991919903,
+           +01262-256043<br>
+           <button class="myBtn1">Click</button>
+        </div>
+
+    </div>
+    <div id="myform">
+        
+        <input type="text" style="width:130px;" id="search">
+
+     <div class="searchButton">Search</div>
+     <div class="gallery"></div>
+    </div>
+   
+  <footer>
+      <div class="footer-content">
+          <h3>Dixita</h3>
+          <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Ea molestiae enim laboriosam earum quas rem beatae amet
+          
+          
+      </div>
+      <div class="footer-bottom">
+          <p>copyright &copy;2020 dixita<span>designed by:sharma</span></p>
+
+      </div>
+  </footer>
+    <script>
+
+   
+
+     function validation(){
+        
+        var pwd3=document.getElementById('password').value;
+        
+        var repass=document.getElementById('repassword').value;
+        
+       
+       if(pwd3.length<10 && pwd3.search(/[A-Z]/)==-1&& pwd3.search(/[!\@\#\$\%\^\&\*\(\)\_\-\+\=\*]/)==-1)
+
+        {
+            
+            document.getElementById('passwordd').innerHTML="** Please Enter valid password Validation**";
+            return false;
+        
+        }
+        else{
+            document.getElementById('passwordd').innerHTML="";
+            
+        }
+        if(pwd3!=repass)
+        {
+             window.alert("please  Enter correct Pssword");
+        }
+      
+        
+    
+        
+
+        
+     }
+
+   
+
+        const scriptUrl='https://script.google.com/macros/s/AKfycbwDCZT6QKQwUcWp1Un6xnO8jA-BxSxCHWmwj6bCBCn4O-p4zZMglHEX7-EG7b-S8W73/exec'
+        const form=document.forms['green-light']
+        form.addEventListener('submit',e=> {
+            e.preventDefault()
+            fetch(scriptUrl,{method:'POST',body:new FormData(form)})
+            .then(response=>alert('thanks!!!'))
+            .catch(error=>console.error('Error!',error.message))
+        })
+       
+
+        $("#myform").submit(function(event){
+        event.preventDefault()
+         var search=$("#search").val()
+         // here search id is input id
+         var url="https://api.unsplash.com/search/photos?query="+search+"canada&&client_id=Pz2XfCrWvFNpODOKb3CpiG1X3Or0LT5WRMsDfAGPKZE";
+         $.ajax({
+             method:'GET',
+             url:url,
+             success:function(data)
+             {
+                 console.log(data);
+             }
+         })
+    })
+        
+       
+        
+  
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
